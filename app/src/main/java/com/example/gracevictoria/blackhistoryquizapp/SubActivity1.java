@@ -1,5 +1,6 @@
 package com.example.gracevictoria.blackhistoryquizapp;
 
+import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -8,7 +9,7 @@ import android.view.View;
  * Created by winstonparris on 3/29/18.
  */
 
-public class SubActivity1 {
+public class SubActivity1 extends Activity {
     public static final String DA = "MainActivity";
 
     public void onCreate( Bundle savedInstanceState ) {
