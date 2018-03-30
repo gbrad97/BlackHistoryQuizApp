@@ -1,3 +1,7 @@
 <resources>
+    <string name="mainTitle">Main Activity</string>
+    <string name="mainButtonText">Go to Subordinate</string>
+    <string name="subTitle">Subordinate Activity</string>
+    <string name="subButtonText">Return to Main</string>
     <string name="app_name">BlackHistoryQuizApp</string>
 </resources>
