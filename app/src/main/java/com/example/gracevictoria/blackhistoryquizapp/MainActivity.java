@@ -1,13 +1,24 @@
 package com.example.gracevictoria.blackhistoryquizapp;
 
+import android.app.FragmentManager;
 import android.content.Intent;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
 
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.InputStreamReader;
+import java.nio.charset.Charset;
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
     public static final String MA = "MainActivity";
+    private FragmentManager fragMgr;
+    public static ArrayList<Body> questions;
+    public static Body selectedBody;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -16,6 +27,28 @@ public class MainActivity extends AppCompatActivity {
     public void goToSubordinate(View v ) {
         Intent myIntent = new Intent( this, SubActivity1.class );
         this.startActivity( myIntent );
+    }
+
+    private ArrayList<Body> readQuestionBankFromCSVfile() {
+        ArrayList<Body> bodies = new ArrayList<>();
+
+        InputStream inStrm = getResources().openRawResource(R.raw.solar_system);
+        BufferedReader bReader = new BufferedReader(
+                new InputStreamReader(inStrm, Charset.defaultCharset()));
+        try {
+            bReader.readLine();
+            String line;
+            while ((line = bReader.readLine()) != null) {
+                Body b = new Body(line);
+                bodies.add(b);
+            }
+            bReader.close();
+        } catch (IOException e) {
+            Log.wtf(ACTIVITY_TAG, "could not find internal resource. pretty bad.");
+            e.printStackTrace();
+        }
+
+        return bodies;
     }
 
     protected void onStart( ) {
