@@ -15,7 +15,7 @@ import java.nio.charset.Charset;
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
-    public static final String MA = "MainActivity";
+    public static final String ACTIVITY_TAG = "MainActivity";
     private FragmentManager fragMgr;
     public static ArrayList<Body> questions;
     public static Body selectedBody;
@@ -32,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     private ArrayList<Body> readQuestionBankFromCSVfile() {
         ArrayList<Body> bodies = new ArrayList<>();
 
-        InputStream inStrm = getResources().openRawResource(R.raw.solar_system);
+        InputStream inStrm = getResources().openRawResource(R.raw.black_history_questions_and_answer);
         BufferedReader bReader = new BufferedReader(
                 new InputStreamReader(inStrm, Charset.defaultCharset()));
         try {
@@ -53,31 +53,31 @@ public class MainActivity extends AppCompatActivity {
 
     protected void onStart( ) {
         super.onStart( );
-        Log.w( MA, "Inside MainActivity:onStart\n" );
+        Log.w(ACTIVITY_TAG, "Inside MainActivity:onStart\n" );
     }
 
     protected void onRestart( ) {
         super.onRestart( );
-        Log.w( MA, "Inside MainActivity:onReStart\n" );
+        Log.w(ACTIVITY_TAG, "Inside MainActivity:onReStart\n" );
     }
 
     protected void onResume( ) {
         super.onResume( );
-        Log.w( MA, "Inside MainActivity:onResume\n" );
+        Log.w(ACTIVITY_TAG, "Inside MainActivity:onResume\n" );
     }
 
     protected void onPause( ) {
         super.onPause( );
-        Log.w( MA, "Inside MainActivity:onPause\n" );
+        Log.w(ACTIVITY_TAG, "Inside MainActivity:onPause\n" );
     }
 
     protected void onStop( ) {
         super.onStop( );
-        Log.w( MA, "Inside MainActivity:onStop\n" );
+        Log.w(ACTIVITY_TAG, "Inside MainActivity:onStop\n" );
     }
 
     protected void onDestroy( ) {
         super.onDestroy( );
-        Log.w( MA, "Inside MainActivity:onDestroy\n" );
+        Log.w(ACTIVITY_TAG, "Inside MainActivity:onDestroy\n" );
     }
 }
