@@ -52,6 +52,7 @@ public class SubActivity1 extends Activity {
         super.onDestroy( );
         Log.w( DA, "Inside DataActivity:onDestroy\n" );
     }
-    Body bd = new Body("black_history_questions_and_answer.csv");
+    Body bc = new Body("black_history_questions_and_answer.csv");
+
 
 }
