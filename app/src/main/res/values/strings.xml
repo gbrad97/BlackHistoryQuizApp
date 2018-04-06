@@ -4,5 +4,8 @@
     <string name="subTitle">Question 1</string>
     <string name="subButtonText">Return to Main Menu</string>
     <string name="app_name">BlackHistoryQuizApp</string>
-
+    <string name="subTitle2">Question 2</string>
+    <string name="subTitle3">Question 3</string>
+    <string name="subTitle4">Question 4</string>
+    <string name="subTitle5">Question 5</string>
 </resources>
