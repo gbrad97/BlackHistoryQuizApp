@@ -18,6 +18,7 @@
     <Button
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="@string/subButtonText"/>
+        android:text="@string/subButtonText"
+        android:onClick="goToSubordinate"/>
 
 </RelativeLayout>
