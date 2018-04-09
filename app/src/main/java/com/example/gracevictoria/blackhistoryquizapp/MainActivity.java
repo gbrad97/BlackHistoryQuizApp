@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -16,21 +17,29 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
     public static final String ACTIVITY_TAG = "MainActivity";
+    public Button startQuizBtn;
     private FragmentManager fragMgr;
-    public static ArrayList<Body> questions;
-    public static Body selectedBody;
+    public static ArrayList<Question> questions;
+    public static Question selectedQuestion;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        startQuizBtn = findViewById(R.id.start_btn);
+        startQuizBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goToSubordinate(view);
+            }
+        });
     }
     public void goToSubordinate(View v ) {
         Intent myIntent = new Intent( this, SubActivity1.class );
         this.startActivity( myIntent );
     }
 
-    private ArrayList<Body> readQuestionBankFromCSVfile() {
-        ArrayList<Body> bodies = new ArrayList<>();
+    private ArrayList<Question> readQuestionBankFromCSVFile() {
+        ArrayList<Question> questions = new ArrayList<>();
 
         InputStream inStrm = getResources().openRawResource(R.raw.black_history_questions_and_answer);
         BufferedReader bReader = new BufferedReader(
@@ -39,16 +48,15 @@ public class MainActivity extends AppCompatActivity {
             bReader.readLine();
             String line;
             while ((line = bReader.readLine()) != null) {
-                Body b = new Body(line);
-                bodies.add(b);
+                Question b = new Question(line);
+                questions.add(b);
             }
             bReader.close();
         } catch (IOException e) {
             Log.wtf(ACTIVITY_TAG, "could not find internal resource. pretty bad.");
             e.printStackTrace();
         }
-
-        return bodies;
+        return questions;
     }
 
     protected void onStart( ) {

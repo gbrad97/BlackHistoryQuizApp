@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.widget.Button;
 
 /**
  * Created by winstonparris on 3/29/18.
@@ -11,12 +12,20 @@ import android.view.View;
 
 public class SubActivity1 extends Activity {
     public static final String DA = "MainActivity";
+    public Button returnToMainBtn;
 
     public void onCreate( Bundle savedInstanceState ) {
 
         super.onCreate( savedInstanceState );
         Log.w( DA, "Inside DataActivity:onCreate\n" );
-        Body bc = new Body("black_history_questions_and_answer.csv");
+        Question bc = new Question("black_history_questions_and_answer.csv");
+        returnToMainBtn = findViewById(R.id.return_to_main_btn);
+        returnToMainBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                goBackToMain(view);
+            }
+        });
 
         setContentView( R.layout.activity_sub1);
     }
