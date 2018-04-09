@@ -16,6 +16,8 @@ public class SubActivity1 extends Activity {
 
         super.onCreate( savedInstanceState );
         Log.w( DA, "Inside DataActivity:onCreate\n" );
+        Body bc = new Body("black_history_questions_and_answer.csv");
+
         setContentView( R.layout.activity_sub1);
     }
 
@@ -52,7 +54,7 @@ public class SubActivity1 extends Activity {
         super.onDestroy( );
         Log.w( DA, "Inside DataActivity:onDestroy\n" );
     }
-    Body bc = new Body("black_history_questions_and_answer.csv");
+
 
 
 

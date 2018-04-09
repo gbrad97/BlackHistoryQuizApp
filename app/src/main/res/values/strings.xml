@@ -1,8 +1,10 @@
 <resources>
     <string name="mainTitle">Main Activity</string>
+    <string name="openingScreenText">Welcome to the Black History Quiz App!</string>
     <string name="mainButtonText">Start Quiz</string>
     <string name="subTitle">Question 1</string>
     <string name="subButtonText">Return to Main Menu</string>
+    <string name="nextQuestionText">Next Question</string>
     <string name="app_name">BlackHistoryQuizApp</string>
     <string name="subTitle2">Question 2</string>
     <string name="subTitle3">Question 3</string>

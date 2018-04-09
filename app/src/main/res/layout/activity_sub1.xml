@@ -6,54 +6,71 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <TextView
-        android:id="@+id/lblSubordinate"
+        android:id="@+id/question_Text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/subTitle"
-        android:textSize="@dimen/titleSize"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="57dp"
+        android:text="Question" />
+
+    <RadioButton
+        android:id="@+id/answer1_radio_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question_Text"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="43dp"
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/answer2_radio_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/answer1_radio_btn"
+        android:layout_below="@+id/answer1_radio_btn"
+        android:layout_marginTop="21dp"
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/answer3_radio_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/answer2_radio_btn"
+        android:layout_below="@+id/answer2_radio_btn"
+        android:layout_marginTop="19dp"
+        android:text="RadioButton" />
+
+    <RadioButton
+        android:id="@+id/answer4_radio_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@+id/answer3_radio_btn"
+        android:layout_below="@+id/answer3_radio_btn"
+        android:layout_marginTop="19dp"
+        android:text="RadioButton" />
+
     <Button
-        android:id="@+id/BtnReturnToMain"
+        android:id="@+id/next_question_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_above="@+id/return_to_main_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="30dp"
+        android:text="@string/nextQuestionText" />
+
+    <Button
+        android:id="@+id/return_to_main_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="36dp"
+        android:onClick="goBackToMain"
         android:text="@string/subButtonText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="goBackToMain"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
-    <RadioButton
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:text=""/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/subTitle"/>
-
-    <RadioButton
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:text=""/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/subTitle2"/>
-
-    <RadioButton
-        android:layout_marginTop="20dp"
-        android:layout_marginLeft="20dp"
-        android:text=""/>
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/subTitle3"/>
-
-    <RadioGroup
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        tools:layout_editor_absoluteX="166dp"
-        tools:layout_editor_absoluteY="104dp" />
 </RelativeLayout>
