@@ -16,9 +16,9 @@ public class SubActivity1 extends Activity {
 
     public void onCreate( Bundle savedInstanceState ) {
 
-        super.onCreate( savedInstanceState );
-        Log.w( DA, "Inside DataActivity:onCreate\n" );
-        Question bc = new Question("black_history_questions_and_answer.csv");
+        super.onCreate(savedInstanceState);
+        Log.w(DA, "Inside DataActivity:onCreate\n");
+
         returnToMainBtn = findViewById(R.id.return_to_main_btn);
         returnToMainBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -27,8 +27,24 @@ public class SubActivity1 extends Activity {
             }
         });
 
-        setContentView( R.layout.activity_sub1);
     }
+   /* public void nextQuestion() {
+
+        setContentView(R.layout.activity_sub1);
+        @SuppressLint("WrongViewCast") final RadioButton question1 = (RadioButton) findViewById(R.id.question_Text);
+        RadioButton answer1 = (RadioButton) findViewById(R.id.answer1_radio_btn);
+        RadioButton answer2 = (RadioButton) findViewById(R.id.answer2_radio_btn);
+        RadioButton answer3 = (RadioButton) findViewById(R.id.answer3_radio_btn);
+        RadioButton answer4 = (RadioButton) findViewById(R.id.answer4_radio_btn);
+        Button nxtbtn = new Button(this);
+        nxtbtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+               String x = MainActivity.questions.get(1).toString();
+                question1.setText(x);
+            }
+        });
+    }*/
 
     public void goBackToMain(View v ) {
         this.finish( );
