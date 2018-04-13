@@ -57,7 +57,8 @@
         android:layout_above="@+id/return_to_main_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="30dp"
-        android:text="@string/nextQuestionText" />
+        android:text="@string/nextQuestionText"
+        android:onClick="nextQuestion"/>
 
     <Button
         android:id="@+id/return_to_main_btn"
