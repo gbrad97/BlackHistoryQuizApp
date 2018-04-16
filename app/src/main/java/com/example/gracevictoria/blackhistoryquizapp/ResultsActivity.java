@@ -6,6 +6,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 
+
+
+import static com.example.gracevictoria.blackhistoryquizapp.MainActivity.ACTIVITY_TAG;
+
 public class ResultsActivity extends Activity{
     public static final String DA = "MainActivity";
     public Button returnToMainBtn;
@@ -14,8 +18,8 @@ public class ResultsActivity extends Activity{
 
         super.onCreate(savedInstanceState);
         Log.w(DA, "Inside DataActivity:onCreate\n");
-
-        returnToMainBtn = findViewById(R.id.return_to_main_btn);
+        setContentView(R.layout.activity_results);
+        returnToMainBtn = findViewById(R.id.tryAgain);
         returnToMainBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

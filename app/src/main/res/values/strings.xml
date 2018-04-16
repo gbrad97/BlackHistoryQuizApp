@@ -10,4 +10,7 @@
     <string name="subTitle3">Question 3</string>
     <string name="subTitle4">Question 4</string>
     <string name="subTitle5">Question 5</string>
+    <string name="scorelabel">Your Score</string>
+    <string name="outputScore">---</string>
+
 </resources>
