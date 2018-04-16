@@ -19,7 +19,7 @@ public class ResultsActivity extends Activity{
         super.onCreate(savedInstanceState);
         Log.w(DA, "Inside DataActivity:onCreate\n");
         setContentView(R.layout.activity_results);
-        returnToMainBtn = findViewById(R.id.tryAgain);
+        returnToMainBtn = findViewById(R.id.trybutton);
         returnToMainBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

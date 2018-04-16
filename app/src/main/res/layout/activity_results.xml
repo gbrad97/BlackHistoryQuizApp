@@ -12,7 +12,8 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="88dp"
-        android:text="Try Again?" />
+        android:text="Try Again?"
+        android:onClick="goBackToMain"/>
 
     <TextView
         android:id="@+id/score_label"

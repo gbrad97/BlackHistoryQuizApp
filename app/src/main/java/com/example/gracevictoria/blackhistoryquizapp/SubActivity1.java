@@ -87,7 +87,9 @@ public class SubActivity1 extends Activity {
 
                 if (questionID == questions.size()) {
                     createScoreButton();
+                    goToScorePage();
                 }
+
 
 
             }
@@ -175,7 +177,7 @@ public class SubActivity1 extends Activity {
 
 
     //TODO: uncomment when the Score Page is connected
-    /*
+
     public void goToScorePage() {
 
         nextQuestionBtn.setOnClickListener(new View.OnClickListener() {
@@ -185,7 +187,7 @@ public class SubActivity1 extends Activity {
             }
         });
     }
-    */
+
 
 
 
@@ -198,14 +200,14 @@ public class SubActivity1 extends Activity {
 
 
     //TODO: uncomment when the Score Page is connected
-    /*
+
     public void startScoreActivity(View v) {
-        Intent myIntent = new Intent(this, ScoreActivity.class);
+        Intent myIntent = new Intent(this, ResultsActivity.class);
         this.startActivity(myIntent);
 
 
     }
-    */
+
 
     protected void onStart( ) {
         super.onStart( );
