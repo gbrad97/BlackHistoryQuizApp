@@ -168,16 +168,19 @@ public class SubActivity1 extends Activity {
         ArrayList<String> shuffledAnswers = shuffleAnswers(questions.get(id - 1));
         Log.w(DA, "About to set answer1radioBtn text");
         answer1RadioBtn.setText(shuffledAnswers.get(0));
-
+        answer1RadioBtn.setChecked(false);
         Log.w(DA, "answer1radioBtn text set");
         Log.w(DA, "About to set answer2radioBtn text");
         answer2RadioBtn.setText(shuffledAnswers.get(1));
+        answer2RadioBtn.setChecked(false);
         Log.w(DA, "answer2radioBtn text set");
         Log.w(DA, "About to set answer3radioBtn text");
         answer3RadioBtn.setText(shuffledAnswers.get(2));
+        answer3RadioBtn.setChecked(false);
         Log.w(DA, "answer3radioBtn text set");
         Log.w(DA, "About to set answer4radioBtn text");
         answer4RadioBtn.setText(shuffledAnswers.get(3));
+        answer4RadioBtn.setChecked(false);
         Log.w(DA, "answer4radioBtn text set");
 
 
