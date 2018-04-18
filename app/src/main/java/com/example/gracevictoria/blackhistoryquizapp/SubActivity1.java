@@ -7,6 +7,7 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.RadioButton;
+import android.widget.RadioGroup;
 import android.widget.TextView;
 
 import java.io.BufferedReader;
@@ -26,6 +27,8 @@ import static com.example.gracevictoria.blackhistoryquizapp.MainActivity.ACTIVIT
 public class SubActivity1 extends Activity {
     public static final String DA = "MainActivity";
     public TextView questionText;
+    public  RadioGroup radioGroup;
+    public TextView textView;
     public RadioButton answer1RadioBtn;
     public RadioButton answer2RadioBtn;
     public RadioButton answer3RadioBtn;
@@ -34,16 +37,19 @@ public class SubActivity1 extends Activity {
     public Button nextQuestionBtn;
     public int questionID = 1;
     public static ArrayList<Question> questions;
+    RadioButton radioButton;
     //TODO: uncomment when the Score Page is connected
     // int score;
 
-    public void onCreate( Bundle savedInstanceState ) {
+
+    public void onCreate(Bundle savedInstanceState ) {
 
         super.onCreate( savedInstanceState );
         Log.w( DA, "Inside DataActivity:onCreate\n" );
         questions = readQuestionBankFromCSVFile();
         setContentView( R.layout.activity_sub1);
-
+        //radioGroup = findViewById(RadioGroup.generateViewId());
+       // textView = findViewById(R.id.text_view_selected);
         Log.w(DA, "About to find questionText");
         questionText = findViewById(R.id.question_Text);
         Log.w(DA, "questionText set");
@@ -84,7 +90,11 @@ public class SubActivity1 extends Activity {
             public void onClick(View view) {
                 questionID++;
                 setQuestionPage(questions, questionID);
-
+//                int radioId = radioGroup.getCheckedRadioButtonId();
+//
+//                radioButton = findViewById(radioId);
+//
+//                textView.setText("Your choice: " + radioButton.getText());
                 if (questionID == questions.size()) {
                     createScoreButton();
                     goToScorePage();
@@ -97,7 +107,17 @@ public class SubActivity1 extends Activity {
 
 
 
+
     }
+    //TODO get this working with the radio group before score results page
+  /*  public void checkButton(View v) {
+        int radioId = radioGroup.getCheckedRadioButtonId();
+
+        radioButton = findViewById(radioId);
+
+        Toast.makeText(this, "Selected Radio Button: " + radioButton.getText(),
+                Toast.LENGTH_SHORT).show();
+    }*/
 
     private ArrayList<Question> readQuestionBankFromCSVFile() {
         ArrayList<Question> questions = new ArrayList<>();

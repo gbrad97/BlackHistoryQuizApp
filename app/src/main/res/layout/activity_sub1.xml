@@ -1,9 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/radio_grp"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    android:layout_height="match_parent">
 
     <TextView
         android:id="@+id/question_Text"
@@ -14,51 +15,77 @@
         android:layout_marginTop="57dp"
         android:text="Question" />
 
-    <RadioButton
-        android:id="@+id/answer1_radio_btn"
+    <RadioGroup
+        android:id="@+id/rdgrp"
+        android:layout_width="198dp"
+        android:layout_height="220dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignTop="@+id/question_Text"
+        android:layout_marginStart="93dp">
+
+
+        <RadioButton
+            android:id="@+id/answer1_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/question_Text"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="43dp"
+            android:text="RadioButton"
+            android:onClick="checkButton"
+            android:checked="true"/>
+
+        <RadioButton
+            android:id="@+id/answer2_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/answer1_radio_btn"
+            android:layout_below="@+id/answer1_radio_btn"
+            android:layout_marginTop="21dp"
+            android:text="RadioButton"
+            android:onClick="checkButton"/>
+
+        <RadioButton
+            android:id="@+id/answer3_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/answer2_radio_btn"
+            android:layout_below="@+id/answer2_radio_btn"
+            android:layout_marginTop="19dp"
+            android:text="RadioButton"
+            android:onClick="checkButton"/>
+
+        <RadioButton
+            android:id="@+id/answer4_radio_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/answer3_radio_btn"
+            android:layout_below="@+id/answer3_radio_btn"
+            android:layout_marginTop="19dp"
+            android:text="RadioButton"
+            android:onClick="checkButton"/>
+
+    </RadioGroup>
+    <TextView
+        android:id="@+id/text_view_selected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/question_Text"
+        android:layout_below="@+id/rdgrp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="43dp"
-        android:text="RadioButton" />
+        android:layout_marginTop="27dp"
+        android:text="Your selection: "
+        android:textSize="20sp" />
 
-    <RadioButton
-        android:id="@+id/answer2_radio_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/answer1_radio_btn"
-        android:layout_below="@+id/answer1_radio_btn"
-        android:layout_marginTop="21dp"
-        android:text="RadioButton" />
-
-    <RadioButton
-        android:id="@+id/answer3_radio_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/answer2_radio_btn"
-        android:layout_below="@+id/answer2_radio_btn"
-        android:layout_marginTop="19dp"
-        android:text="RadioButton" />
-
-    <RadioButton
-        android:id="@+id/answer4_radio_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignStart="@+id/answer3_radio_btn"
-        android:layout_below="@+id/answer3_radio_btn"
-        android:layout_marginTop="19dp"
-        android:text="RadioButton" />
 
     <Button
         android:id="@+id/next_question_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_above="@+id/return_to_main_btn"
+        android:layout_below="@+id/text_view_selected"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="30dp"
-        android:text="@string/nextQuestionText"
-        android:onClick="nextQuestion"/>
+        android:onClick="nextQuestion"
+        android:text="@string/nextQuestionText" />
+
 
     <Button
         android:id="@+id/return_to_main_btn"
@@ -66,12 +93,13 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="36dp"
+        android:layout_marginBottom="11dp"
         android:onClick="goBackToMain"
         android:text="@string/subButtonText"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 
 </RelativeLayout>
