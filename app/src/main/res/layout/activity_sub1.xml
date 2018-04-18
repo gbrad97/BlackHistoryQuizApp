@@ -87,15 +87,23 @@
         android:id="@+id/return_to_main_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true"
+        android:layout_below="@+id/next_question_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="11dp"
         android:onClick="goBackToMain"
         android:text="@string/subButtonText"
+      />
+
+    <Button
+        android:id="@+id/apply_answr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Apply"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        android:onClick="chkButton"/>
 
 
 </RelativeLayout>

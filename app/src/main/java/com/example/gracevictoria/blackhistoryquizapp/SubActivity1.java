@@ -9,7 +9,6 @@ import android.widget.Button;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -36,6 +35,7 @@ public class SubActivity1 extends Activity {
     public RadioButton answer4RadioBtn;
     public Button returnToMainBtn;
     public Button nextQuestionBtn;
+    public Button applybtn;
     public int questionID = 1;
     public static ArrayList<Question> questions;
     RadioButton radioButton;
@@ -49,8 +49,8 @@ public class SubActivity1 extends Activity {
         Log.w( DA, "Inside DataActivity:onCreate\n" );
         questions = readQuestionBankFromCSVFile();
         setContentView( R.layout.activity_sub1);
-        //radioGroup = findViewById(RadioGroup.generateViewId());
-       // textView = findViewById(R.id.text_view_selected);
+        answersRadioButtonGroup = findViewById(RadioGroup.generateViewId());
+        textView = findViewById(R.id.text_view_selected);
         Log.w(DA, "About to find questionText");
         questionText = findViewById(R.id.question_Text);
         Log.w(DA, "questionText set");
@@ -85,7 +85,17 @@ public class SubActivity1 extends Activity {
         Log.w(DA, "Set the listener");
         Log.w(DA, "About to check the answer");
 
+        applybtn = findViewById(R.id.apply_answr);
+        applybtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                int radioId = answersRadioButtonGroup.getCheckedRadioButtonId();
 
+                radioButton = findViewById(radioId);
+
+                textView.setText("Your choice: " + radioButton.getText());
+            }
+        });
 
         nextQuestionBtn = findViewById(R.id.next_question_btn);
         nextQuestionBtn.setOnClickListener(new View.OnClickListener() {
@@ -93,11 +103,7 @@ public class SubActivity1 extends Activity {
             public void onClick(View view) {
                 questionID++;
                 setQuestionPage(questions, questionID);
-//                int radioId = radioGroup.getCheckedRadioButtonId();
-//
-//                radioButton = findViewById(radioId);
-//
-//                textView.setText("Your choice: " + radioButton.getText());
+
                 if (questionID == questions.size()) {
                     createScoreButton();
                     goToScorePage();
@@ -110,18 +116,20 @@ public class SubActivity1 extends Activity {
     }
 
 
+
+
     //TODO get this working with the radio group before score results page
     /*
-  public void checkButton() {
-        int radioId = answersRadioButtonGroup.getCheckedRadioButtonId();
-        radioButton = findViewById(radioId);
-        radioButton.setOnClickListener(new OnCliC);
-        /*
-        Toast.makeText(this, "Selected Radio Button: " + radioButton.getText(),
-                    Toast.LENGTH_SHORT).show();
+      public void checkButton() {
+            int radioId = answersRadioButtonGroup.getCheckedRadioButtonId();
+            radioButton = findViewById(radioId);
+            radioButton.setOnClickListener(new OnCliC);
+            /*
+            Toast.makeText(this, "Selected Radio Button: " + radioButton.getText(),
+                        Toast.LENGTH_SHORT).show();
 
 
-    }
+        }
     */
 
 
@@ -160,6 +168,7 @@ public class SubActivity1 extends Activity {
         ArrayList<String> shuffledAnswers = shuffleAnswers(questions.get(id - 1));
         Log.w(DA, "About to set answer1radioBtn text");
         answer1RadioBtn.setText(shuffledAnswers.get(0));
+
         Log.w(DA, "answer1radioBtn text set");
         Log.w(DA, "About to set answer2radioBtn text");
         answer2RadioBtn.setText(shuffledAnswers.get(1));
