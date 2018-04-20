@@ -31,7 +31,8 @@
             android:layout_below="@+id/question_Text"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="43dp"
-            android:text="RadioButton" />
+            android:text="RadioButton"
+            />
 
         <RadioButton
             android:id="@+id/answer2_radio_btn"

@@ -5,14 +5,13 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
-
-
-
-import static com.example.gracevictoria.blackhistoryquizapp.MainActivity.ACTIVITY_TAG;
+import android.widget.TextView;
 
 public class ResultsActivity extends Activity{
     public static final String DA = "MainActivity";
     public Button returnToMainBtn;
+    public TextView textView;
+    scoreResults sc;
 
     public void onCreate( Bundle savedInstanceState ) {
 
@@ -26,7 +25,8 @@ public class ResultsActivity extends Activity{
                 goBackToMain(view);
             }
         });
-
+        textView = findViewById(R.id.scoreOutput_label);
+        textView.setText(sc.outputScore(5,7));
     }
     public void goBackToMain(View v ) {
         this.finish( );

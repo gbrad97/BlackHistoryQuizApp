@@ -4,6 +4,11 @@ public class scoreResults {
     int correctAnswers;
     int number_Questions;
 
+    public scoreResults(int correctAnswers, int number_Questions) {
+        this.correctAnswers = correctAnswers;
+        this.number_Questions = number_Questions;
+    }
+
 
     public boolean checkAnswer(String answerChosen, String correctAnswer){
         if(answerChosen.equals(correctAnswer)){

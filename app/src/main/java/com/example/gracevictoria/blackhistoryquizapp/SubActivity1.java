@@ -27,6 +27,7 @@ import static com.example.gracevictoria.blackhistoryquizapp.MainActivity.ACTIVIT
  */
 
 public class SubActivity1 extends Activity {
+
     public static final String DA = "MainActivity";
     public TextView questionText;
     public RadioGroup answersRadioButtonGroup;
@@ -126,10 +127,12 @@ public class SubActivity1 extends Activity {
             @Override
             public void onClick(View view) {
                 questionID++;
+                //resetQuestionsPage();
                 setQuestionPage(questions, questionID);
 
                 if (questionID == questions.size()) {
                     createScoreButton();
+                    Log.w(DA, "Created the score button");
                     goToScorePage();
                 }
 
@@ -155,6 +158,13 @@ public class SubActivity1 extends Activity {
 
         }
     */
+  /*  public void resetQuestionsPage(){
+        questionText.setText("");
+        answer1RadioBtn.setText("");
+        answer2RadioBtn.setText("");
+        answer3RadioBtn.setText("");
+        answer4RadioBtn.setText("");
+    }*/
 
 
     private ArrayList<Question> readQuestionBankFromCSVFile() {
