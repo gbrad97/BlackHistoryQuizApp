@@ -1,6 +1,7 @@
 package com.example.gracevictoria.blackhistoryquizapp;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -22,14 +23,17 @@ public class ResultsActivity extends Activity{
         returnToMainBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                goBackToMain(view);
+                //goBackToMain(view);
+                Intent myIntent = new Intent(ResultsActivity.this, MainActivity.class);
+                startActivity(myIntent);
+
             }
         });
         textView = findViewById(R.id.scoreOutput_label);
-        textView.setText(sc.outputScore(5,7));
+        textView.setText("Hey there!");
     }
     public void goBackToMain(View v ) {
-        this.finish( );
+        this.finish();
     }
 
     protected void onStart( ) {
