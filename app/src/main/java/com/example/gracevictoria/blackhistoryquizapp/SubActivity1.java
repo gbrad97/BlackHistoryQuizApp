@@ -3,6 +3,8 @@ package com.example.gracevictoria.blackhistoryquizapp;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
@@ -40,7 +42,7 @@ public class SubActivity1 extends Activity {
     public static ArrayList<Question> questions;
     RadioButton radioButton;
     //TODO: uncomment when the Score Page is connected
-    // int score;
+    int correctAnswers;
 
 
     public void onCreate(Bundle savedInstanceState ) {
@@ -90,10 +92,32 @@ public class SubActivity1 extends Activity {
             @Override
             public void onClick(View v) {
                 int radioId = answersRadioButtonGroup.getCheckedRadioButtonId();
-
                 radioButton = findViewById(radioId);
+                String selectedAnswer = radioButton.getText().toString();
+                textView.setText("Your choice: " + selectedAnswer);
+                textView.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                textView.setText("Your choice: " + radioButton.getText());
+                    }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                        
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+
+                    }
+                });
+
+                for(Question question : questions) {
+                    checkAnswer(question, selectedAnswer);
+
+                }
+
             }
         });
 
@@ -203,15 +227,11 @@ public class SubActivity1 extends Activity {
     }
 
     //TODO: uncomment when the Score Page is connected
-    /*
-    public void checkAnswer(Question question, RadioButton checkedRadioBtn) {
-        String selectedAnswer = String.valueOf(checkedRadioBtn.getText());
-        if (selectedAnswer == question.getCorrectAnswer()) {
-            score++;
-        }
 
+    public boolean checkAnswer(Question question, String selectedAnswer) {
+        return selectedAnswer == question.getCorrectAnswer();
     }
-    */
+
 
 
     //TODO: uncomment when the Score Page is connected
