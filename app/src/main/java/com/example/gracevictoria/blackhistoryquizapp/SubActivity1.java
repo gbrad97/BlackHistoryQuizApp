@@ -27,7 +27,6 @@ import static com.example.gracevictoria.blackhistoryquizapp.MainActivity.ACTIVIT
  */
 
 public class SubActivity1 extends Activity {
-
     public static final String DA = "MainActivity";
     public TextView questionText;
     public RadioGroup answersRadioButtonGroup;
@@ -117,6 +116,7 @@ public class SubActivity1 extends Activity {
                 for(Question question : questions) {
                     checkAnswer(question, selectedAnswer);
 
+
                 }
 
             }
@@ -127,12 +127,10 @@ public class SubActivity1 extends Activity {
             @Override
             public void onClick(View view) {
                 questionID++;
-                //resetQuestionsPage();
                 setQuestionPage(questions, questionID);
 
                 if (questionID == questions.size()) {
                     createScoreButton();
-                    Log.w(DA, "Created the score button");
                     goToScorePage();
                 }
 
@@ -158,13 +156,6 @@ public class SubActivity1 extends Activity {
 
         }
     */
-  /*  public void resetQuestionsPage(){
-        questionText.setText("");
-        answer1RadioBtn.setText("");
-        answer2RadioBtn.setText("");
-        answer3RadioBtn.setText("");
-        answer4RadioBtn.setText("");
-    }*/
 
 
     private ArrayList<Question> readQuestionBankFromCSVFile() {
@@ -202,19 +193,20 @@ public class SubActivity1 extends Activity {
         ArrayList<String> shuffledAnswers = shuffleAnswers(questions.get(id - 1));
         Log.w(DA, "About to set answer1radioBtn text");
         answer1RadioBtn.setText(shuffledAnswers.get(0));
-        answer1RadioBtn.setChecked(false);
+        answersRadioButtonGroup.clearCheck();
+        //answer1RadioBtn.setChecked(false);
         Log.w(DA, "answer1radioBtn text set");
         Log.w(DA, "About to set answer2radioBtn text");
         answer2RadioBtn.setText(shuffledAnswers.get(1));
-        answer2RadioBtn.setChecked(false);
+        //answer2RadioBtn.setChecked(false);
         Log.w(DA, "answer2radioBtn text set");
         Log.w(DA, "About to set answer3radioBtn text");
         answer3RadioBtn.setText(shuffledAnswers.get(2));
-        answer3RadioBtn.setChecked(false);
+        //answer3RadioBtn.setChecked(false);
         Log.w(DA, "answer3radioBtn text set");
         Log.w(DA, "About to set answer4radioBtn text");
         answer4RadioBtn.setText(shuffledAnswers.get(3));
-        answer4RadioBtn.setChecked(false);
+        //answer4RadioBtn.setChecked(false);
         Log.w(DA, "answer4radioBtn text set");
 
 
