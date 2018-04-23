@@ -1,10 +1,18 @@
 package com.example.gracevictoria.blackhistoryquizapp;
 
-public class scoreResults {
+import java.util.ArrayList;
+
+public class ScoreResults {
+    //ArrayList<Question> questions;
     int correctAnswers;
     int number_Questions;
 
-    public scoreResults(int correctAnswers, int number_Questions) {
+    public ScoreResults(ArrayList<Question> questions) {
+        correctAnswers = 0;
+        number_Questions = questions.size();
+    }
+
+    public ScoreResults(int correctAnswers, int number_Questions) {
         this.correctAnswers = correctAnswers;
         this.number_Questions = number_Questions;
     }
@@ -19,8 +27,8 @@ public class scoreResults {
         }
     }
 
-    public String outputScore(int correctAnswers, int number_Questions){
-       String  output = "you got a " + Integer.toString(correctAnswers) +" out of "+ Integer.toString(number_Questions);
+    public String outputScore(){
+       String  output = "You received a " + Integer.toString(correctAnswers) +" out of "+ Integer.toString(number_Questions);
         return output;
     }
 
