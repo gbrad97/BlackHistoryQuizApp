@@ -25,12 +25,20 @@
         android:text="Your Score is:" />
 
     <TextView
-        android:id="@+id/scoreOutput_label"
+        android:id="@+id/results_output_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="123dp"
         android:text="---" />
+
+    <TextView
+        android:id="@+id/score_output_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="167dp" />
 
 </RelativeLayout>
