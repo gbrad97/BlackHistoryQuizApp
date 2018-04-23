@@ -42,7 +42,8 @@ public class SubActivity1 extends Activity {
     public static ArrayList<Question> questions;
     RadioButton radioButton;
     //TODO: uncomment when the Score Page is connected
-    int correctAnswers;
+    //public static ScoreResults score;
+    public static int correctAnswers;
 
 
     public void onCreate(Bundle savedInstanceState ) {
@@ -103,7 +104,6 @@ public class SubActivity1 extends Activity {
 
                     @Override
                     public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-                        
 
                     }
 
@@ -114,11 +114,11 @@ public class SubActivity1 extends Activity {
                 });
 
                 for(Question question : questions) {
-                    checkAnswer(question, selectedAnswer);
-
-
+                    boolean checkedAnswer = checkAnswer(question, selectedAnswer);
+                    if(checkedAnswer) {
+                        correctAnswers++;
+                    }
                 }
-
             }
         });
 
@@ -209,7 +209,6 @@ public class SubActivity1 extends Activity {
         //answer4RadioBtn.setChecked(false);
         Log.w(DA, "answer4radioBtn text set");
 
-
     }
 
     public ArrayList<String> shuffleAnswers(Question question) {
@@ -228,6 +227,7 @@ public class SubActivity1 extends Activity {
 
     }
 
+
     //TODO: uncomment when the Score Page is connected
 
     public boolean checkAnswer(Question question, String selectedAnswer) {
@@ -239,7 +239,6 @@ public class SubActivity1 extends Activity {
     //TODO: uncomment when the Score Page is connected
 
     public void goToScorePage() {
-
         nextQuestionBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -247,11 +246,6 @@ public class SubActivity1 extends Activity {
             }
         });
     }
-
-
-
-
-
 
 
     public void goBackToMain(View v ) {
@@ -264,7 +258,6 @@ public class SubActivity1 extends Activity {
     public void startScoreActivity(View v) {
         Intent myIntent = new Intent(this, ResultsActivity.class);
         this.startActivity(myIntent);
-
 
     }
 
@@ -298,7 +291,6 @@ public class SubActivity1 extends Activity {
         super.onDestroy( );
         Log.w( DA, "Inside DataActivity:onDestroy\n" );
     }
-
 
 }
 
