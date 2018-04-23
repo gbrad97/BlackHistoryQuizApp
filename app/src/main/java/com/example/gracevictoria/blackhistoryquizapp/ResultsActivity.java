@@ -8,17 +8,22 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import java.util.ArrayList;
+
 public class ResultsActivity extends Activity{
     public static final String DA = "MainActivity";
     public Button returnToMainBtn;
-    public TextView textView;
-    scoreResults sc;
+    public TextView resultsView;
+    public TextView scoreView;
+    public int correctAnswers;
+    public ArrayList<Question> questions;
 
     public void onCreate( Bundle savedInstanceState ) {
 
         super.onCreate(savedInstanceState);
         Log.w(DA, "Inside DataActivity:onCreate\n");
         setContentView(R.layout.activity_results);
+
         returnToMainBtn = findViewById(R.id.trybutton);
         returnToMainBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -29,9 +34,18 @@ public class ResultsActivity extends Activity{
 
             }
         });
-        textView = findViewById(R.id.scoreOutput_label);
-        textView.setText("Hey there!");
+        correctAnswers = SubActivity1.correctAnswers;
+        questions = SubActivity1.questions;
+        resultsView = findViewById(R.id.results_output_label);
+        resultsView.setText("You received a " + Integer.toString(correctAnswers) + " out of "+ Integer.toString(questions.size()));
+        scoreView = findViewById(R.id.score_output_label);
+        scoreView.setText(Float.toString(calculateScore(correctAnswers, questions)) + "%");
     }
+
+    public float calculateScore(int correctAnswers, ArrayList<Question> questions) {
+        return (correctAnswers * 100) / questions.size();
+    }
+
     public void goBackToMain(View v ) {
         this.finish();
     }
