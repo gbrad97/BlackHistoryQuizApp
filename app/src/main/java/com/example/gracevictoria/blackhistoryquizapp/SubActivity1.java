@@ -113,11 +113,10 @@ public class SubActivity1 extends Activity {
                     }
                 });
 
-                for(Question question : questions) {
-                    boolean checkedAnswer = checkAnswer(question, selectedAnswer);
-                    if(checkedAnswer) {
-                        correctAnswers++;
-                    }
+                Question currentQuestion = questions.get(questionID - 1);
+                boolean checkedAnswer = checkAnswer(currentQuestion, selectedAnswer);
+                if (checkedAnswer) {
+                    correctAnswers++;
                 }
             }
         });
