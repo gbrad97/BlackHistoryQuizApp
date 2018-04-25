@@ -94,31 +94,29 @@ public class SubActivity1 extends Activity {
             public void onClick(View v) {
                 int radioId = answersRadioButtonGroup.getCheckedRadioButtonId();
                 radioButton = findViewById(radioId);
-                if (radioButton.isChecked()) {
-                    String selectedAnswer = radioButton.getText().toString();
-                    textView.setText("Your choice: " + selectedAnswer);
-                    textView.addTextChangedListener(new TextWatcher() {
-                        @Override
-                        public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+                String selectedAnswer = radioButton.getText().toString();
+                textView.setText("Your choice: " + selectedAnswer);
+                textView.addTextChangedListener(new TextWatcher() {
+                    @Override
+                    public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
 
-                        }
-
-                        @Override
-                        public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
-
-                        }
-
-                        @Override
-                        public void afterTextChanged(Editable editable) {
-
-                        }
-                    });
-
-                    Question currentQuestion = questions.get(questionID - 1);
-                    boolean checkedAnswer = checkAnswer(currentQuestion, selectedAnswer);
-                    if (checkedAnswer) {
-                        correctAnswers++;
                     }
+
+                    @Override
+                    public void onTextChanged(CharSequence charSequence, int i, int i1, int i2) {
+
+                    }
+
+                    @Override
+                    public void afterTextChanged(Editable editable) {
+
+                    }
+                });
+
+                Question currentQuestion = questions.get(questionID - 1);
+                boolean checkedAnswer = checkAnswer(currentQuestion, selectedAnswer);
+                if (checkedAnswer) {
+                    correctAnswers++;
                 }
             }
         });
