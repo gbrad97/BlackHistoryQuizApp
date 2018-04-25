@@ -81,6 +81,7 @@
         android:layout_below="@+id/text_view_selected"
         android:layout_centerHorizontal="true"
         android:onClick="nextQuestion"
+
         android:text="@string/nextQuestionText" />
 
 
@@ -91,11 +92,12 @@
         android:layout_below="@+id/next_question_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="11dp"
+        android:background="@color/xugold"
         android:onClick="goBackToMain"
-        android:text="@string/subButtonText"
-      />
+        android:text="@string/subButtonText" />
 
     <Button
+
         android:id="@+id/apply_answr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"

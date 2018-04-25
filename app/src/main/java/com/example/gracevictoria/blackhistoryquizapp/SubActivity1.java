@@ -41,6 +41,7 @@ public class SubActivity1 extends Activity {
     public int questionID = 1;
     public static ArrayList<Question> questions;
     RadioButton radioButton;
+    String selectedAnswer;
     //TODO: uncomment when the Score Page is connected
     //public static ScoreResults score;
     public static int correctAnswers;
@@ -94,7 +95,8 @@ public class SubActivity1 extends Activity {
             public void onClick(View v) {
                 int radioId = answersRadioButtonGroup.getCheckedRadioButtonId();
                 radioButton = findViewById(radioId);
-                String selectedAnswer = radioButton.getText().toString();
+
+                selectedAnswer = radioButton.getText().toString();
                 textView.setText("Your choice: " + selectedAnswer);
                 textView.addTextChangedListener(new TextWatcher() {
                     @Override
@@ -112,12 +114,13 @@ public class SubActivity1 extends Activity {
 
                     }
                 });
-
                 Question currentQuestion = questions.get(questionID - 1);
                 boolean checkedAnswer = checkAnswer(currentQuestion, selectedAnswer);
                 if (checkedAnswer) {
                     correctAnswers++;
                 }
+
+
             }
         });
 
