@@ -10,7 +10,10 @@
     <string name="subTitle3">Question 3</string>
     <string name="subTitle4">Question 4</string>
     <string name="subTitle5">Question 5</string>
-    <string name="scorelabel">Your Score</string>
+    <string name="scoreLabel">Your Score Is: </string>
+    <string name="tryAgainText">Try Again</string>
+    <string name="selectionText">Your selection: </string>
+    <string name="applyBtnText">Apply</string>
     <string name="outputScore">---</string>
 
 </resources>

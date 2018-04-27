@@ -12,8 +12,11 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="88dp"
-        android:text="Try Again?"
-        android:onClick="goBackToMain"/>
+        android:background="@color/xugold"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="goBackToMain"
+        android:text="@string/tryAgainText"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/score_label"
@@ -22,7 +25,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="86dp"
-        android:text="Your Score is:" />
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/scoreLabel"
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/results_output_label"
@@ -31,7 +36,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="123dp"
-        android:text="---" />
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="---"
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/score_output_label"
@@ -39,6 +46,8 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="167dp" />
+        android:layout_marginTop="167dp"
+        android:fontFamily="casual"
+        android:textSize="18sp" />
 
 </RelativeLayout>

@@ -23,7 +23,7 @@
     </style>
 
     <style name="InputStyle" parent="CenteredTextStyle">
-        <item name = "android:textColor">@color/darkBlue</item>
+        <item name = "android:textColor">@color/darkBrown</item>
     </style>
 
     <style name="OutputStyle" parent="CenteredTextStyle">

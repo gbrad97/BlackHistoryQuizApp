@@ -13,15 +13,18 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="57dp"
-        android:text="Question" />
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="Question"
+        android:textAlignment="center"
+        android:textSize="18sp" />
 
     <RadioGroup
         android:id="@+id/answers_radio_btn_group"
         android:layout_width="198dp"
         android:layout_height="220dp"
-        android:layout_alignParentStart="true"
+        android:layout_alignParentEnd="true"
         android:layout_alignTop="@+id/question_Text"
-        android:layout_marginStart="93dp">
+        android:layout_marginEnd="58dp">
 
 
         <RadioButton
@@ -31,8 +34,9 @@
             android:layout_below="@+id/question_Text"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="43dp"
+            android:fontFamily="sans-serif-smallcaps"
             android:text="RadioButton"
-            />
+            android:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/answer2_radio_btn"
@@ -41,7 +45,9 @@
             android:layout_alignStart="@+id/answer1_radio_btn"
             android:layout_below="@+id/answer1_radio_btn"
             android:layout_marginTop="21dp"
-            android:text="RadioButton" />
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="RadioButton"
+            android:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/answer3_radio_btn"
@@ -50,7 +56,9 @@
             android:layout_alignStart="@+id/answer2_radio_btn"
             android:layout_below="@+id/answer2_radio_btn"
             android:layout_marginTop="19dp"
-            android:text="RadioButton" />
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="RadioButton"
+            android:textAlignment="center" />
 
         <RadioButton
             android:id="@+id/answer4_radio_btn"
@@ -59,7 +67,9 @@
             android:layout_alignStart="@+id/answer3_radio_btn"
             android:layout_below="@+id/answer3_radio_btn"
             android:layout_marginTop="19dp"
-            android:text="RadioButton" />
+            android:fontFamily="sans-serif-smallcaps"
+            android:text="RadioButton"
+            android:textAlignment="center" />
 
     </RadioGroup>
 
@@ -70,7 +80,8 @@
         android:layout_below="@+id/answers_radio_btn_group"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="27dp"
-        android:text="Your selection: "
+        android:fontFamily="sans-serif-smallcaps"
+        android:text="@string/selectionText"
         android:textSize="20sp" />
 
 
@@ -78,35 +89,46 @@
         android:id="@+id/next_question_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/text_view_selected"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:onClick="nextQuestion"
 
-        android:text="@string/nextQuestionText" />
+        android:layout_marginBottom="108dp"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="nextQuestion"
+        android:text="@string/nextQuestionText"
+        android:textSize="18sp" />
 
 
     <Button
         android:id="@+id/return_to_main_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/next_question_btn"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="11dp"
+        android:layout_marginBottom="48dp"
         android:background="@color/xugold"
+        android:fontFamily="sans-serif-smallcaps"
         android:onClick="goBackToMain"
-        android:text="@string/subButtonText" />
+        android:text="@string/subButtonText"
+        android:textSize="18sp" />
 
     <Button
 
         android:id="@+id/apply_answr"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Apply"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="163dp"
+        android:background="@color/darkBrown"
+        android:fontFamily="sans-serif-smallcaps"
+        android:onClick="chkButton"
+        android:text="@string/applyBtnText"
+        android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        android:onClick="chkButton"/>
+        app:layout_constraintTop_toTopOf="parent" />
 
 
 </RelativeLayout>
