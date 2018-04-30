@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/border_background"
     tools:context="com.example.gracevictoria.blackhistoryquizapp.MainActivity">
 
     <TextView
@@ -13,10 +14,10 @@
         android:layout_above="@+id/start_btn"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="121dp"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="@font/walter_turncoat"
         android:text="@string/openingScreenText"
         android:textAlignment="center"
-        android:textSize="24sp"
+        android:textSize="30sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
@@ -24,15 +25,27 @@
 
     <Button
         android:id="@+id/start_btn"
-        android:layout_width="103dp"
+        android:layout_width="131dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="186dp"
         android:background="@color/xugold"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="@font/walter_turncoat"
         android:onClick="goToSubordinate"
         android:text="@string/mainButtonText"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="39dp"
+        android:fontFamily="@font/walter_turncoat"
+        android:text="@string/creatorsLabel"
+        android:textAlignment="center"
         android:textSize="18sp" />
 
 </RelativeLayout>

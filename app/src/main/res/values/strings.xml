@@ -15,5 +15,6 @@
     <string name="selectionText">Your selection: </string>
     <string name="applyBtnText">Apply</string>
     <string name="outputScore">---</string>
+    <string name="creatorsLabel">Created By Grace Braden &amp; Winston Parris</string>
 
 </resources>

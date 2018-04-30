@@ -1,19 +1,21 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/border_background"
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
 
     <Button
         android:id="@+id/trybutton"
-        android:layout_width="wrap_content"
+        android:layout_width="128dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="88dp"
         android:background="@color/xugold"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="@font/walter_turncoat"
         android:onClick="goBackToMain"
         android:text="@string/tryAgainText"
         android:textSize="18sp" />
@@ -25,9 +27,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="86dp"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="@font/walter_turncoat"
         android:text="@string/scoreLabel"
-        android:textSize="24sp" />
+        android:textSize="30sp" />
 
     <TextView
         android:id="@+id/results_output_label"
@@ -36,9 +38,9 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="123dp"
-        android:fontFamily="sans-serif-smallcaps"
+        android:fontFamily="@font/walter_turncoat"
         android:text="---"
-        android:textSize="18sp" />
+        android:textSize="24sp" />
 
     <TextView
         android:id="@+id/score_output_label"
