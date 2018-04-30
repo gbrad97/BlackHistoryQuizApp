@@ -15,7 +15,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="88dp"
         android:background="@color/xugold"
-        android:fontFamily="@font/walter_turncoat"
+        android:fontFamily="sans-serif-smallcaps"
         android:onClick="goBackToMain"
         android:text="@string/tryAgainText"
         android:textSize="18sp" />
@@ -27,7 +27,7 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="86dp"
-        android:fontFamily="@font/walter_turncoat"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="@string/scoreLabel"
         android:textSize="30sp" />
 
@@ -35,10 +35,9 @@
         android:id="@+id/results_output_label"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
+        android:layout_below="@+id/score_label"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="123dp"
-        android:fontFamily="@font/walter_turncoat"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="---"
         android:textSize="24sp" />
 

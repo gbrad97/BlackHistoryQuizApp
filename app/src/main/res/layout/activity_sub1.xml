@@ -14,10 +14,10 @@
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="45dp"
-        android:fontFamily="@font/walter_turncoat"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="Question"
         android:textAlignment="center"
-        android:textSize="24sp" />
+        android:textSize="18sp" />
 
     <RadioGroup
         android:id="@+id/answers_radio_btn_group"
@@ -36,10 +36,10 @@
             android:layout_below="@+id/question_Text"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="43dp"
-            android:fontFamily="@font/walter_turncoat"
+            android:fontFamily="sans-serif-smallcaps"
             android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/answer2_radio_btn"
@@ -48,10 +48,10 @@
             android:layout_alignStart="@+id/answer1_radio_btn"
             android:layout_below="@+id/answer1_radio_btn"
             android:layout_marginTop="21dp"
-            android:fontFamily="@font/walter_turncoat"
+            android:fontFamily="sans-serif-smallcaps"
             android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/answer3_radio_btn"
@@ -60,10 +60,10 @@
             android:layout_alignStart="@+id/answer2_radio_btn"
             android:layout_below="@+id/answer2_radio_btn"
             android:layout_marginTop="19dp"
-            android:fontFamily="@font/walter_turncoat"
+            android:fontFamily="sans-serif-smallcaps"
             android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
         <RadioButton
             android:id="@+id/answer4_radio_btn"
@@ -72,10 +72,10 @@
             android:layout_alignStart="@+id/answer3_radio_btn"
             android:layout_below="@+id/answer3_radio_btn"
             android:layout_marginTop="19dp"
-            android:fontFamily="@font/walter_turncoat"
+            android:fontFamily="sans-serif-smallcaps"
             android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="16sp" />
+            android:textSize="14sp" />
 
     </RadioGroup>
 
@@ -86,7 +86,7 @@
         android:layout_below="@+id/answers_radio_btn_group"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="27dp"
-        android:fontFamily="@font/walter_turncoat"
+        android:fontFamily="sans-serif-smallcaps"
         android:text="@string/selectionText"
         android:textAlignment="center"
         android:textSize="20sp" />
@@ -100,7 +100,7 @@
         android:layout_centerHorizontal="true"
 
         android:layout_marginBottom="108dp"
-        android:fontFamily="@font/walter_turncoat"
+        android:fontFamily="sans-serif-smallcaps"
         android:onClick="nextQuestion"
         android:text="@string/nextQuestionText"
         android:textSize="18sp" />
@@ -108,13 +108,13 @@
 
     <Button
         android:id="@+id/return_to_main_btn"
-        android:layout_width="wrap_content"
+        android:layout_width="192dp"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="48dp"
         android:background="@color/xugold"
-        android:fontFamily="@font/walter_turncoat"
+        android:fontFamily="sans-serif-smallcaps"
         android:onClick="goBackToMain"
         android:text="@string/subButtonText"
         android:textSize="18sp" />
@@ -128,7 +128,7 @@
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="163dp"
         android:background="@color/darkBrown"
-        android:fontFamily="@font/walter_turncoat"
+        android:fontFamily="sans-serif-smallcaps"
         android:onClick="chkButton"
         android:text="@string/applyBtnText"
         android:textSize="18sp"

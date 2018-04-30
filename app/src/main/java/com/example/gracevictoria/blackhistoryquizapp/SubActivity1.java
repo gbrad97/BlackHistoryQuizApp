@@ -191,6 +191,7 @@ public class SubActivity1 extends Activity {
         Log.w(DA, "About to set question text");
         Log.w(DA, questions.get(id - 1).getQuestionText());
         questionText.setText(questions.get(id - 1).getQuestionText());
+
         Log.w(DA, "question text set");
         ArrayList<String> shuffledAnswers = shuffleAnswers(questions.get(id - 1));
         Log.w(DA, "About to set answer1radioBtn text");
