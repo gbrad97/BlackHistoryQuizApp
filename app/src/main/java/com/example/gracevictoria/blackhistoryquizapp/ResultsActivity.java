@@ -38,7 +38,7 @@ public class ResultsActivity extends Activity{
         correctAnswers = SubActivity1.correctAnswers;
         questions = SubActivity1.questions;
         resultsView = findViewById(R.id.results_output_label);
-        resultsView.setText("You received a " + Integer.toString(correctAnswers) + " out of "+ Integer.toString(questions.size()));
+        resultsView.setText(Integer.toString(correctAnswers) + " out of "+ Integer.toString(questions.size()));
         scoreView = findViewById(R.id.score_output_label);
         scoreView.setText(Float.toString(calculateScore(correctAnswers, questions)) + "%");
     }

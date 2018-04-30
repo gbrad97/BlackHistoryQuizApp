@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="45dp"
+        android:layout_marginTop="60dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="Question"
         android:textAlignment="center"
@@ -21,12 +21,10 @@
 
     <RadioGroup
         android:id="@+id/answers_radio_btn_group"
-        android:layout_width="198dp"
-        android:layout_height="220dp"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentTop="true"
-        android:layout_marginEnd="58dp"
-        android:layout_marginTop="57dp">
+        android:layout_width="181dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question_Text"
+        android:layout_centerHorizontal="true">
 
 
         <RadioButton
@@ -39,7 +37,7 @@
             android:fontFamily="sans-serif-smallcaps"
             android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/answer2_radio_btn"
@@ -51,7 +49,7 @@
             android:fontFamily="sans-serif-smallcaps"
             android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/answer3_radio_btn"
@@ -63,7 +61,7 @@
             android:fontFamily="sans-serif-smallcaps"
             android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
         <RadioButton
             android:id="@+id/answer4_radio_btn"
@@ -75,7 +73,7 @@
             android:fontFamily="sans-serif-smallcaps"
             android:text="RadioButton"
             android:textAlignment="center"
-            android:textSize="14sp" />
+            android:textSize="16sp" />
 
     </RadioGroup>
 
@@ -83,9 +81,9 @@
         android:id="@+id/text_view_selected"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/answers_radio_btn_group"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="27dp"
+        android:layout_marginBottom="209dp"
         android:fontFamily="sans-serif-smallcaps"
         android:text="@string/selectionText"
         android:textAlignment="center"
@@ -99,7 +97,7 @@
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
 
-        android:layout_marginBottom="108dp"
+        android:layout_marginBottom="88dp"
         android:fontFamily="sans-serif-smallcaps"
         android:onClick="nextQuestion"
         android:text="@string/nextQuestionText"
@@ -112,7 +110,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="48dp"
+        android:layout_marginBottom="29dp"
         android:background="@color/xugold"
         android:fontFamily="sans-serif-smallcaps"
         android:onClick="goBackToMain"
@@ -126,7 +124,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginBottom="163dp"
+        android:layout_marginBottom="145dp"
         android:background="@color/darkBrown"
         android:fontFamily="sans-serif-smallcaps"
         android:onClick="chkButton"

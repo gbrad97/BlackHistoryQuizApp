@@ -97,7 +97,7 @@ public class SubActivity1 extends Activity {
                 radioButton = findViewById(radioId);
 
                 selectedAnswer = radioButton.getText().toString();
-                textView.setText("Your choice: " + selectedAnswer);
+                textView.setText("Your selection: " + selectedAnswer);
                 textView.addTextChangedListener(new TextWatcher() {
                     @Override
                     public void beforeTextChanged(CharSequence charSequence, int i, int i1, int i2) {
